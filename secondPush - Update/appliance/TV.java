@@ -5,6 +5,11 @@ public class TV {
 
     private boolean on;
 
+    public TV(boolean on) {
+        this.on = on;
+    }
+    
+
     public void setTVOn(Room r){
         if(!r.getTv().isOn() && r.getMotionSensor() == true){
             r.getTv().setOn(true);

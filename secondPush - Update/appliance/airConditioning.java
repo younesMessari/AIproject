@@ -1,24 +1,34 @@
 package appliance;
 
 public class airConditioning {
-    private int temperature;
+    private double temperature;
+    private double desiredtemp;
     private boolean On;
 
-    public airConditioning(int temperature, boolean on) {
+    public airConditioning(double temperature, double desiredtemp, boolean on) {
+        this.temperature = temperature;
+        this.desiredtemp = desiredtemp;
+        On = on;
+    }
+    
+    public airConditioning(double temperature, boolean on) {
         this.temperature = temperature;
         On = on;
     }
+    
+    public airConditioning(boolean on) {
+        On = on;
+    }
 
-    public int getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
     public boolean isOn() {
         return On;
     }
-
-
-    public void setTemperature(int temperature) {
+    
+    public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 
@@ -34,14 +44,15 @@ public class airConditioning {
         if (isOn()){
             setOn(false);
         }
-
     }
+    
     public void raiseTemp(){
         setTemperature(this.temperature++);
     }
     public void lowerTemp(){
         setTemperature(this.temperature--);
     }
+    
     public void Heat(){
         if(!isOn()){
             turnOn();

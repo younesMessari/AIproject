@@ -14,6 +14,12 @@ public class Blinds {
     LocalTime time19
             = LocalTime.parse("19:00:00");
 
+    public Blinds(double luminosity, boolean raised) {
+        this.luminosity = luminosity;
+        this.time = LocalTime.now();
+        this.raised = raised;
+    }
+    
     public Blinds(double luminosity, LocalTime time, boolean raised) {
         this.luminosity = luminosity;
         this.time = LocalTime.now();

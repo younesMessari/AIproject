@@ -6,6 +6,17 @@ public class Lights {
     private double DesiredLux;
     private boolean Switch;
 
+    public Lights(double CurrentLux, double DesiredLux, boolean Switch) {
+        this.CurrentLux = CurrentLux;
+        this.DesiredLux = DesiredLux;
+        this.Switch = Switch;
+    }
+    
+    public Lights(double CurrentLux,boolean Switch) {
+        this.CurrentLux = CurrentLux;
+        this.Switch = Switch;
+    }
+    
     public double getCurrentLux() {
         return CurrentLux;
     }
@@ -71,7 +82,7 @@ public class Lights {
     }
     
     public boolean RaiseLum(){
-    
+            
     }
     public boolean LowerLum(){
     
