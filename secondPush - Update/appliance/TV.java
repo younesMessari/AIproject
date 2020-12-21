@@ -30,4 +30,13 @@ public class TV {
         return on;
     }
 
+    @Override
+    public String toString() {
+       if (isOn()==true){
+           return ("The Tv is on.");
+       }
+       else return ("The Tv is off");
+    }
+    
+    
 }

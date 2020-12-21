@@ -81,4 +81,14 @@ public class Blinds {
             raised = true;
         }
     }
+
+    @Override
+    public String toString() {
+        if( isRaised() == true){
+            return ("Blinds are raised");
+        }
+        else return ("Blinds are down");//To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

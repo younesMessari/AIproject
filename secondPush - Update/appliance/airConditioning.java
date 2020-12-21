@@ -71,4 +71,14 @@ public class airConditioning {
         }
         turnOff();
     }
+
+    @Override
+    public String toString() {
+        if (isOn()==true){  
+            return ("The AC is on and the current temperature is "+getTemperature());
+        }
+        else return ("The AC is off and the current temperature is "+getTemperature());
+    }
+    
+    
 }

@@ -82,10 +82,12 @@ public class Lights {
     }
     
     public boolean RaiseLum(){
-            
+       setCurrentLux(CurrentLux++);
+       return true;
     }
     public boolean LowerLum(){
-    
+       setCurrentLux(CurrentLux--);
+       return true;
     }
     public boolean turnOn(){
         if (isOn()==true){
@@ -105,7 +107,11 @@ public class Lights {
         setSwitch(false);
         return true;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        if (isOn() == true){
+            return ("The lights are on and have a luminosity of: "+getCurrentLux()+".");}
+        else return ("The lights are off");
+    }
 }

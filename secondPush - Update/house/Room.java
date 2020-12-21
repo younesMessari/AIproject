@@ -23,6 +23,32 @@ public class Room {
         this.motionSensor = motionSensor;
     }
 
+    public Room() {
+       
+        System.out.println("What is the name of room: ");
+        setRoomname(sc.nextLine());
+        System.out.println("What is the luminosity inside the room: ");
+        setLuminosity_in(Double.parseDouble(sc.nextLine()));
+        System.out.println("What is the luminosity outside the room: ");
+        setLuminosity_out(Double.parseDouble(sc.nextLine()));
+        System.out.println("Current temperature: ");
+        setCurrent_temp(Double.parseDouble(sc.nextLine()));
+        System.out.println("Is the motion sensor on or off? ");
+        System.out.println("Enter 'YES' or 'NO': ");
+        String choice = sc.nextLine();
+        while(choice != "yes" || choice != "no"){
+            if (choice.equalsIgnoreCase("yes")){
+                setMotionSensor(true); }
+            else if (choice.equalsIgnoreCase("no")){            
+                setMotionSensor(false);}
+        }
+        setAc();
+        setBlinds();
+        setLights();
+        setTv();
+        
+    }
+
     public String getRoomname() {
         return roomname;
     }
@@ -149,8 +175,18 @@ public class Room {
         return luminosity_out;
     }
 
-    public void setLuminosity_Out(Double Luminosity_Out) {
-        this.luminosity_out = Luminosity_Out;
+    public void setLuminosity_out(Double Luminosity_out) {
+        this.luminosity_out = Luminosity_out;
+    }
+
+    @Override
+    public String toString() {
+        System.out.println("This is room '"+getRoomname()+"'.");
+        System.out.println(getLights());
+        System.out.println(getBlinds());
+        System.out.println(getTv());
+        System.out.println(getAc());
+      return ("");
     }
    
     
