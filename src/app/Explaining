@@ -1,8 +1,0 @@
-mainApp:
-  Will contain our main function. We will see what we put in it later.
-  
-Settings:
-  Contains the settings chosen by the user. It will be accessible and modifiable at any time while the code is running
-
-State:
-  Will describe the current state of the house.

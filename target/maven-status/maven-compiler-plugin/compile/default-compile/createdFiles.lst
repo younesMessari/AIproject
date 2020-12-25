@@ -1,0 +1,10 @@
+appliance\Alarm.class
+appliance\Lights.class
+app\State.class
+appliance\airConditioning.class
+house\Room.class
+app\Settings.class
+appliance\TV.class
+appliance\Blinds.class
+house\House.class
+app\mainApp.class
